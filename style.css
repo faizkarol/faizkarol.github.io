@@ -1,1 +1,100 @@
+body{
+font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+background:#0f172a;
+color:white;
+transition:.3s;
+}
 
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
+background:#111827;
+position:sticky;
+top:0;
+}
+
+.nav-links a,
+.nav-links button{
+margin-left:20px;
+color:white;
+text-decoration:none;
+background:none;
+border:none;
+cursor:pointer;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.hero h1{
+font-size:48px;
+margin:20px 0 10px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+}
+
+.buttons{
+margin-top:20px;
+}
+
+.buttons a{
+padding:12px 20px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+margin:10px;
+border-radius:8px;
+}
+
+section{
+padding:70px 10%;
+}
+
+.project-card{
+background:#1e293b;
+padding:20px;
+margin:20px 0;
+border-radius:12px;
+}
+
+.project-card a{
+color:#60a5fa;
+}
+
+.skills span{
+display:inline-block;
+padding:10px 15px;
+background:#1e293b;
+margin:8px;
+border-radius:8px;
+}
+
+.light{
+background:white;
+color:black;
+}
+
+.light nav{
+background:#f3f4f6;
+}
+
+.light .project-card,
+.light .skills span{
+background:#e5e7eb;
+}
