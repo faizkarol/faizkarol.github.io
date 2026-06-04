@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,24 +10,38 @@
 
 <body>
 
+<div class="background-grid"></div>
+
 <nav>
     <div class="logo">Faiz Karol</div>
 
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <button id="theme-toggle">🌙</button>
-    </div>
+```
+<div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <button id="theme-toggle">🌙</button>
+</div>
+```
+
 </nav>
 
 <section class="hero">
 
+```
+<div class="hero-left">
+
+    <div class="profile-glow"></div>
+
     <img src="assets/profile.jpg" alt="Faiz Karol">
+
+</div>
+
+<div class="hero-right">
 
     <h1>Faiz Karol</h1>
 
@@ -35,8 +50,8 @@
     </h3>
 
     <p class="tagline">
-        Turning data into decisions through analytics, machine learning,
-        and decision intelligence.
+        Turning data into decisions through analytics,
+        machine learning, and decision intelligence.
     </p>
 
     <div class="hero-buttons">
@@ -45,11 +60,40 @@
         <a href="https://www.linkedin.com/in/faiz-karol" target="_blank">LinkedIn</a>
     </div>
 
+    <div class="stats-bar">
+
+        <div class="stat">
+            <h2>3+</h2>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="stat">
+            <h2>5</h2>
+            <p>Portfolio Projects</p>
+        </div>
+
+        <div class="stat">
+            <h2>M.Sc.</h2>
+            <p>Analytics</p>
+        </div>
+
+        <div class="stat">
+            <h2>Focus</h2>
+            <p>Decision Analytics</p>
+        </div>
+
+    </div>
+
+</div>
+```
+
 </section>
 
 <section id="about">
 
 <h2>About Me</h2>
+
+<div class="card">
 
 <p>
 I'm a Data Analyst with experience spanning banking analytics,
@@ -69,11 +113,13 @@ and stakeholder-focused reporting to transform complex datasets
 into actionable business insights.
 </p>
 
+</div>
+
 </section>
 
 <section id="research">
 
-<h2>Current Research</h2>
+<h2>Research Focus</h2>
 
 <div class="card">
 
@@ -87,14 +133,14 @@ Master's thesis exploring how decision intelligence frameworks
 can support strategic decision-making in uncertain environments.
 </p>
 
-<ul>
-<li>Decision Analytics</li>
-<li>Decision Intelligence</li>
-<li>Robust Decision Making (RDM)</li>
-<li>Dynamic Adaptive Policy Pathways (DAPP)</li>
-<li>Info-Gap Decision Theory (IGDT)</li>
-<li>Strategic Decision Support Systems</li>
-</ul>
+<div class="research-tags">
+<span>Decision Analytics</span>
+<span>Decision Intelligence</span>
+<span>RDM</span>
+<span>DAPP</span>
+<span>IGDT</span>
+<span>Strategic Decision Support</span>
+</div>
 
 </div>
 
@@ -104,54 +150,66 @@ can support strategic decision-making in uncertain environments.
 
 <h2>Experience</h2>
 
-<div class="card">
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-content">
+
 <h3>Data Analyst (Working Student)</h3>
 
 <p>
-HSBC Trinkaus & Burkhardt, Düsseldorf, Germany
+HSBC Trinkaus & Burkhardt, Düsseldorf
 <br>
 Mar 2025 – Feb 2026
 </p>
 
 <ul>
 <li>Automated liquidity and regulatory reporting workflows using Python and VBA.</li>
-<li>Supported stress testing, scenario modelling and capital adequacy analysis.</li>
-<li>Delivered stakeholder-focused analyses and dashboards for senior management.</li>
+<li>Supported stress testing and capital adequacy analysis.</li>
+<li>Delivered analytical dashboards and stakeholder reporting.</li>
 </ul>
 
 </div>
+</div>
 
-<div class="card">
-<h3>Senior Software Engineer – Enterprise Systems & Credit Decisioning</h3>
+<div class="timeline-item">
+<div class="timeline-content">
+
+<h3>Senior Software Engineer</h3>
 
 <p>
-Capgemini Technology Services (Client: HSBC), Pune, India
+Capgemini Technology Services (Client: HSBC)
 <br>
 Oct 2021 – Feb 2024
 </p>
 
 <ul>
-<li>Led development of HSBC's credit card decisioning platform supporting 100K+ daily transactions.</li>
-<li>Built analytical models using SAS Viya and SAS Visual Analytics.</li>
-<li>Managed end-to-end SDLC activities.</li>
-<li>Improved operational stability through automation and process improvements.</li>
+<li>Developed HSBC credit decisioning systems.</li>
+<li>Built analytical models using SAS Viya.</li>
+<li>Managed SDLC and production support activities.</li>
 </ul>
 
 </div>
+</div>
 
-<div class="card">
+<div class="timeline-item">
+<div class="timeline-content">
+
 <h3>Python Developer Intern</h3>
 
 <p>
-Peace Infotech Pvt. Ltd., Mumbai, India
+Peace Infotech Pvt. Ltd.
 <br>
 Aug 2019 – Oct 2019
 </p>
 
 <ul>
-<li>Built Python automation solutions for recurring business workflows.</li>
-<li>Reduced execution time and manual effort through automation.</li>
+<li>Built automation solutions using Python.</li>
+<li>Reduced manual effort through workflow optimization.</li>
 </ul>
+
+</div>
+</div>
 
 </div>
 
@@ -166,7 +224,7 @@ Aug 2019 – Oct 2019
 <h3>M.Sc. Big Data & Business Analytics</h3>
 
 <p>
-FOM University of Applied Sciences, Essen, Germany
+FOM University of Applied Sciences, Germany
 <br>
 Apr 2024 – Feb 2026
 </p>
@@ -178,14 +236,12 @@ Apr 2024 – Feb 2026
 <h3>B.Eng. Electronics & Telecommunications</h3>
 
 <p>
-University of Mumbai, India
+University of Mumbai
 <br>
 Aug 2016 – May 2021
 </p>
 
-<p>
-Graduated with Distinction.
-</p>
+<p>Graduated with Distinction.</p>
 
 </div>
 
@@ -195,29 +251,113 @@ Graduated with Distinction.
 
 <h2>Featured Projects</h2>
 
-<div class="card">
+<div class="project-grid">
+
+<div class="card featured-project">
+
+<span class="badge">Featured</span>
+
 <h3>Toni Kroos Career Analysis & Football Intelligence Corpus</h3>
-<p>Football intelligence corpus combining structured, semi-structured and unstructured data for tactical and performance analytics.</p>
+
+<p>
+Football intelligence corpus combining structured,
+semi-structured and unstructured data for tactical
+and performance analytics.
+</p>
+
+<div class="project-tags">
+<span>Python</span>
+<span>Sports Analytics</span>
+<span>Data Engineering</span>
+</div>
+
+<a href="https://github.com/faizkarol/toni-kroos-career-analysis" target="_blank">
+View Repository →
+</a>
+
 </div>
 
 <div class="card">
+
 <h3>Football Fan Momentum Analytics</h3>
-<p>Multimodal analytics system combining sentiment analysis, tweet volume and stadium audio intensity.</p>
+
+<p>
+Multimodal analytics system combining sentiment analysis,
+tweet volume and stadium audio intensity.
+</p>
+
+<div class="project-tags">
+<span>NLP</span>
+<span>Audio Analytics</span>
+<span>Machine Learning</span>
+</div>
+
+<a href="https://github.com/faizkarol/football-fan-momentum-analytics" target="_blank">
+View Repository →
+</a>
+
 </div>
 
 <div class="card">
+
 <h3>Promotion Profitability Optimization Engine</h3>
-<p>Machine learning engine for FMCG promotion ROI forecasting and campaign optimization.</p>
+
+<p>
+Machine learning engine for FMCG promotion ROI forecasting.
+</p>
+
+<div class="project-tags">
+<span>ML</span>
+<span>Business Analytics</span>
+<span>FMCG</span>
+</div>
+
+<a href="https://github.com/faizkarol/promotion-profitability-optimization-engine" target="_blank">
+View Repository →
+</a>
+
 </div>
 
 <div class="card">
+
 <h3>Loan Default Risk Analysis</h3>
-<p>Predictive analytics system for identifying high-risk loan applicants.</p>
+
+<p>
+Predictive analytics system for identifying high-risk applicants.
+</p>
+
+<div class="project-tags">
+<span>Finance</span>
+<span>Risk Analytics</span>
+<span>ML</span>
+</div>
+
+<a href="https://github.com/faizkarol/loan-default-risk-analysis" target="_blank">
+View Repository →
+</a>
+
 </div>
 
 <div class="card">
+
 <h3>F1 Pit Stop Strategy Analysis</h3>
-<p>Regression and performance analysis of Formula 1 pit stop strategies from 2018–2024.</p>
+
+<p>
+Regression and performance analysis of Formula 1 pit stop strategies.
+</p>
+
+<div class="project-tags">
+<span>Regression</span>
+<span>Sports Analytics</span>
+<span>Visualization</span>
+</div>
+
+<a href="https://github.com/faizkarol/f1-pit-stop-strategy-analysis" target="_blank">
+View Repository →
+</a>
+
+</div>
+
 </div>
 
 </section>
@@ -226,36 +366,46 @@ Graduated with Distinction.
 
 <h2>Skills</h2>
 
+<div class="skill-category">
+<h3>Analytics & Data</h3>
 <div class="skills">
-
 <span>Python</span>
 <span>SQL</span>
-<span>VBA</span>
 <span>Pandas</span>
 <span>NumPy</span>
+<span>Excel</span>
+</div>
+</div>
+
+<div class="skill-category">
+<h3>Machine Learning</h3>
+<div class="skills">
 <span>Scikit-Learn</span>
-<span>Power BI</span>
-<span>SAS Viya</span>
-<span>SAS Visual Analytics</span>
-<span>Machine Learning</span>
-<span>Decision Analytics</span>
+<span>Classification</span>
+<span>Regression</span>
+<span>Clustering</span>
+<span>Predictive Modeling</span>
+</div>
+</div>
+
+<div class="skill-category">
+<h3>Decision Analytics</h3>
+<div class="skills">
 <span>Decision Intelligence</span>
 <span>RDM</span>
 <span>DAPP</span>
 <span>IGDT</span>
-<span>Business Analytics</span>
-<span>Banking Analytics</span>
-<span>Git</span>
-<span>GitHub</span>
-
+</div>
 </div>
 
-<h3>Languages</h3>
-
+<div class="skill-category">
+<h3>Banking Analytics</h3>
 <div class="skills">
-<span>English</span>
-<span>German (B1)</span>
-<span>Hindi</span>
+<span>Stress Testing</span>
+<span>Regulatory Reporting</span>
+<span>SAS Viya</span>
+<span>SAS Visual Analytics</span>
+</div>
 </div>
 
 </section>
@@ -264,6 +414,8 @@ Graduated with Distinction.
 
 <h2>Contact</h2>
 
+<div class="card">
+
 <p>Email: karol.faiz@yahoo.com</p>
 
 <p>
@@ -271,7 +423,17 @@ Graduated with Distinction.
 <a href="https://www.linkedin.com/in/faiz-karol">LinkedIn</a>
 </p>
 
+</div>
+
 </section>
+
+<footer>
+
+<p>
+© 2026 Faiz Karol | Built with HTML, CSS & GitHub Pages
+</p>
+
+</footer>
 
 <script src="script.js"></script>
 
