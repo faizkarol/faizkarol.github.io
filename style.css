@@ -448,3 +448,91 @@ background-image:
 linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),
 linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);
 }
+
+/* DASHBOARD */
+
+#dashboard{
+padding-top:20px;
+}
+
+.dashboard-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:40px;
+}
+
+.dashboard-card{
+background:var(--card);
+padding:30px;
+border-radius:16px;
+text-align:center;
+border:1px solid rgba(79,140,255,.2);
+transition:.3s;
+}
+
+.dashboard-card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 25px rgba(79,140,255,.2);
+}
+
+.dashboard-card h3{
+font-size:42px;
+color:var(--accent);
+margin-bottom:10px;
+}
+
+.analytics-panel{
+background:var(--card);
+padding:30px;
+border-radius:16px;
+border:1px solid rgba(79,140,255,.2);
+}
+
+.analytics-panel h3{
+margin-bottom:25px;
+color:#8cb5ff;
+}
+
+.skill-bar{
+margin-bottom:25px;
+}
+
+.skill-bar span{
+display:block;
+margin-bottom:8px;
+font-weight:600;
+}
+
+.bar{
+height:14px;
+background:#0b1422;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+border-radius:20px;
+background:linear-gradient(
+90deg,
+#4f8cff,
+#7aa8ff
+);
+}
+
+.sports{
+width:40%;
+}
+
+.banking{
+width:30%;
+}
+
+.ml{
+width:20%;
+}
+
+.decision{
+width:10%;
+}
