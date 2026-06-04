@@ -450,60 +450,56 @@ linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);
 }
 
 /* =========================
-   ANALYTICS DASHBOARD
+   ANALYTICS DASHBOARD V2
 ========================= */
 
-#dashboard{
-padding:80px 8%;
-}
-
-.dashboard-grid{
+.dashboard-kpis{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:20px;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
-.dashboard-card{
+.kpi-card{
 background:var(--card);
-border:1px solid rgba(79,140,255,.2);
-border-radius:18px;
-padding:30px;
+padding:25px;
+border-radius:16px;
 text-align:center;
+border:1px solid rgba(79,140,255,.2);
 transition:.3s;
 }
 
-.dashboard-card:hover{
-transform:translateY(-6px);
-box-shadow:0 0 30px rgba(79,140,255,.25);
+.kpi-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(79,140,255,.25);
 }
 
-.dashboard-card h3{
+.kpi-card h3{
 font-size:42px;
 color:var(--accent);
 margin-bottom:10px;
 }
 
-.dashboard-card p{
-font-size:15px;
-color:var(--muted);
+.dashboard-layout{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
 }
 
-.analytics-panel{
+.dashboard-panel{
 background:var(--card);
-border:1px solid rgba(79,140,255,.2);
-border-radius:18px;
 padding:30px;
+border-radius:16px;
+border:1px solid rgba(79,140,255,.2);
 }
 
-.analytics-panel h3{
+.dashboard-panel h3{
 margin-bottom:25px;
 color:#8cb5ff;
-font-size:24px;
 }
 
 .skill-bar{
-margin-bottom:25px;
+margin-bottom:22px;
 }
 
 .skill-bar span{
@@ -513,15 +509,20 @@ font-weight:600;
 }
 
 .bar{
-height:16px;
-background:#0b1422;
+height:18px;
+background:#0a1422;
 border-radius:20px;
 overflow:hidden;
 }
 
 .fill{
 height:100%;
-border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+padding-right:10px;
+font-size:12px;
+font-weight:700;
 background:linear-gradient(
 90deg,
 #4f8cff,
@@ -529,35 +530,31 @@ background:linear-gradient(
 );
 }
 
-.sports{
-width:40%;
-}
+.sports{width:40%;}
+.banking{width:30%;}
+.ml{width:20%;}
+.decision{width:10%;}
 
-.banking{
-width:30%;
-}
+.python{width:95%;}
+.sql{width:85%;}
+.sas{width:75%;}
+.powerbi{width:80%;}
 
-.ml{
-width:20%;
-}
+@media(max-width:900px){
 
-.decision{
-width:10%;
-}
-
-/* Responsive */
-
-@media(max-width:1100px){
-
-.dashboard-grid{
+.dashboard-kpis{
 grid-template-columns:repeat(2,1fr);
 }
 
+.dashboard-layout{
+grid-template-columns:1fr;
 }
 
-@media(max-width:650px){
+}
 
-.dashboard-grid{
+@media(max-width:600px){
+
+.dashboard-kpis{
 grid-template-columns:1fr;
 }
 
