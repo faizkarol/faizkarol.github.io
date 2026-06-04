@@ -449,31 +449,33 @@ linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),
 linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);
 }
 
-/* DASHBOARD */
+/* =========================
+   ANALYTICS DASHBOARD
+========================= */
 
 #dashboard{
-padding-top:20px;
+padding:80px 8%;
 }
 
 .dashboard-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(4,1fr);
 gap:20px;
 margin-bottom:40px;
 }
 
 .dashboard-card{
 background:var(--card);
-padding:30px;
-border-radius:16px;
-text-align:center;
 border:1px solid rgba(79,140,255,.2);
+border-radius:18px;
+padding:30px;
+text-align:center;
 transition:.3s;
 }
 
 .dashboard-card:hover{
 transform:translateY(-6px);
-box-shadow:0 0 25px rgba(79,140,255,.2);
+box-shadow:0 0 30px rgba(79,140,255,.25);
 }
 
 .dashboard-card h3{
@@ -482,16 +484,22 @@ color:var(--accent);
 margin-bottom:10px;
 }
 
+.dashboard-card p{
+font-size:15px;
+color:var(--muted);
+}
+
 .analytics-panel{
 background:var(--card);
-padding:30px;
-border-radius:16px;
 border:1px solid rgba(79,140,255,.2);
+border-radius:18px;
+padding:30px;
 }
 
 .analytics-panel h3{
 margin-bottom:25px;
 color:#8cb5ff;
+font-size:24px;
 }
 
 .skill-bar{
@@ -505,7 +513,7 @@ font-weight:600;
 }
 
 .bar{
-height:14px;
+height:16px;
 background:#0b1422;
 border-radius:20px;
 overflow:hidden;
@@ -535,4 +543,22 @@ width:20%;
 
 .decision{
 width:10%;
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.dashboard-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:650px){
+
+.dashboard-grid{
+grid-template-columns:1fr;
+}
+
 }
