@@ -6,9 +6,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Faiz Karol | Data Analyst Portfolio</title>
+<title>Faiz Karol | Analytics Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -23,17 +28,36 @@
 <nav>
 
 <div class="logo">
-Faiz Karol
+
+<div class="logo-box">
+FK
+</div>
+
+<span>FAIZ KAROL</span>
+
 </div>
 
 <div class="nav-links">
 
-<a href="#studio">Analytics Studio</a>
+<a href="#">Home</a>
+<a href="#dashboard">Analytics Studio</a>
 <a href="#projects">Projects</a>
-<a href="#research">Research</a>
+<a href="#research">Research Lab</a>
 <a href="#journey">Journey</a>
 <a href="#expertise">Expertise</a>
 <a href="#contact">Contact</a>
+
+</div>
+
+<div class="nav-icons">
+
+<a href="https://github.com/faizkarol">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://linkedin.com/in/faiz-karol">
+<i class="fab fa-linkedin"></i>
+</a>
 
 <button id="theme-toggle">
 🌙
@@ -47,9 +71,9 @@ Faiz Karol
 
 <section class="hero">
 
-<div class="hero-left">
+<div class="hero-profile">
 
-<div class="profile-glow"></div>
+<div class="profile-ring">
 
 <img
 src="assets/profile.jpg"
@@ -57,42 +81,116 @@ alt="Faiz Karol">
 
 </div>
 
-<div class="hero-right">
+</div>
 
-<div class="hero-tag">
+<div class="hero-content">
 
-DATA ANALYST • BUSINESS ANALYTICS • SPORTS ANALYTICS
+<div class="hero-badge">
+
+DATA ANALYST
+
+•
+
+BUSINESS ANALYTICS
+
+•
+
+SPORTS ANALYTICS
+
+•
+
+DECISION INTELLIGENCE
 
 </div>
 
 <h1>
-Faiz Karol
+
+FAIZ
+
+<span>KAROL</span>
+
 </h1>
 
 <h2>
-Data Analyst | Business Analytics | Sports Analytics | Decision Intelligence
+
+Data Analyst |
+Business Analytics |
+Sports Analytics |
+Decision Intelligence
+
 </h2>
 
 <p>
 
-Transforming data into actionable insights through analytics,
-research, visualization and strategic decision-making.
+Transforming data into actionable insights through
+analytics, research, visualization and strategic
+decision-making.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="assets/Faiz_Karol_CV.pdf" target="_blank">
+<a href="assets/Faiz_Karol_CV.pdf">
+
+<i class="fa-solid fa-download"></i>
+
 Download CV
+
 </a>
 
-<a href="https://github.com/faizkarol" target="_blank">
+<a href="https://github.com/faizkarol">
+
+<i class="fab fa-github"></i>
+
 GitHub
+
 </a>
 
-<a href="https://www.linkedin.com/in/faiz-karol" target="_blank">
+<a href="https://linkedin.com/in/faiz-karol">
+
+<i class="fab fa-linkedin"></i>
+
 LinkedIn
+
 </a>
+
+</div>
+
+</div>
+
+<div class="hero-dashboard">
+
+<div class="dashboard-card large-card">
+
+<div class="card-header">
+
+<span>Performance Overview</span>
+
+<select>
+
+<option>Last 12 Months</option>
+
+</select>
+
+</div>
+
+<canvas id="performanceChart"></canvas>
+
+</div>
+
+<div class="dashboard-card">
+
+<h4>Domain Breakdown</h4>
+
+<canvas id="domainChart"></canvas>
+
+</div>
+
+<div class="dashboard-card">
+
+<h4>Analytics Activity</h4>
+
+<canvas id="activityChart"></canvas>
 
 </div>
 
@@ -102,126 +200,191 @@ LinkedIn
 
 <!-- ANALYTICS STUDIO -->
 
-<section id="studio">
+<section id="dashboard">
 
-<div class="section-title">
+<div class="section-header">
 
-<h2>Analytics Studio</h2>
+<div>
+
+<h2>
+
+<i class="fa-solid fa-chart-column"></i>
+
+Analytics Studio
+
+</h2>
 
 <p>
-Interactive overview of projects, expertise and research.
+
+Interactive overview of expertise,
+projects and research.
+
 </p>
 
 </div>
 
-<div class="dashboard-grid">
+<a href="#" class="dashboard-link">
 
-<div class="widget">
+View Full Dashboard
 
-<h3>
-Portfolio Domains
-</h3>
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
 
-<canvas id="domainChart"></canvas>
+</a>
 
 </div>
 
+<div class="analytics-grid">
+
+<!-- DOMAINS -->
+
 <div class="widget">
 
-<h3>
-Analytics Toolkit
-</h3>
+<h3>Portfolio Domains</h3>
 
-<div class="skill-row">
+<canvas id="portfolioChart"></canvas>
+
+</div>
+
+<!-- TOOLKIT -->
+
+<div class="widget">
+
+<h3>Analytics Toolkit</h3>
+
+<div class="tool-row">
+
 <span>Python</span>
-<div class="skill-bar python"></div>
+
+<div class="bar">
+<div class="fill python"></div>
 </div>
 
-<div class="skill-row">
+<span>95%</span>
+
+</div>
+
+<div class="tool-row">
+
 <span>SQL</span>
-<div class="skill-bar sql"></div>
+
+<div class="bar">
+<div class="fill sql"></div>
 </div>
 
-<div class="skill-row">
+<span>90%</span>
+
+</div>
+
+<div class="tool-row">
+
 <span>Excel</span>
-<div class="skill-bar excel"></div>
+
+<div class="bar">
+<div class="fill excel"></div>
 </div>
 
-<div class="skill-row">
+<span>95%</span>
+
+</div>
+
+<div class="tool-row">
+
 <span>Power BI</span>
-<div class="skill-bar powerbi"></div>
+
+<div class="bar">
+<div class="fill powerbi"></div>
 </div>
 
-<div class="skill-row">
+<span>80%</span>
+
+</div>
+
+<div class="tool-row">
+
 <span>VBA</span>
-<div class="skill-bar vba"></div>
+
+<div class="bar">
+<div class="fill vba"></div>
 </div>
 
-<div class="skill-row">
+<span>85%</span>
+
+</div>
+
+<div class="tool-row">
+
 <span>SAS</span>
-<div class="skill-bar sas"></div>
+
+<div class="bar">
+<div class="fill sas"></div>
+</div>
+
+<span>70%</span>
+
 </div>
 
 </div>
+
+<!-- CAREER -->
 
 <div class="widget">
 
-<h3>
-Career Journey
-</h3>
+<h3>Career Journey</h3>
 
 <div class="mini-timeline">
 
 <div class="timeline-item">
-<span>2019</span>
-<p>Python Developer Intern</p>
+<strong>2019</strong>
+<span>Python Developer Intern</span>
 </div>
 
 <div class="timeline-item">
-<span>2021</span>
-<p>Capgemini</p>
+<strong>2021</strong>
+<span>Capgemini</span>
 </div>
 
 <div class="timeline-item">
-<span>2025</span>
-<p>HSBC Germany</p>
+<strong>2025</strong>
+<span>HSBC Germany</span>
 </div>
 
 <div class="timeline-item">
-<span>2026</span>
-<p>M.Sc Graduate</p>
+<strong>2026</strong>
+<span>M.Sc Graduate</span>
 </div>
 
 </div>
 
 </div>
+
+<!-- RESEARCH -->
 
 <div class="widget">
 
-<h3>
-Research Focus
-</h3>
+<h3>Research Focus</h3>
 
 <div class="research-flow">
 
-<div>
-Football Intelligence
+<div class="research-node">
+
+⚽ Football Intelligence
+
 </div>
 
-<div>
-↓
+<div class="arrow">↓</div>
+
+<div class="research-node">
+
+🧠 Decision Frameworks
+
 </div>
 
-<div>
-Decision Frameworks
-</div>
+<div class="arrow">↓</div>
 
-<div>
-↓
-</div>
+<div class="research-node">
 
-<div>
-Decision Intelligence
+📊 Decision Intelligence
+
 </div>
 
 </div>
@@ -232,17 +395,40 @@ Decision Intelligence
 
 </section>
 
-<!-- FEATURED WORK -->
+  <!-- FEATURED WORK -->
 
 <section id="projects">
 
-<div class="section-title">
+<div class="section-header">
 
-<h2>Featured Work</h2>
+<h2>
+<i class="fa-regular fa-star"></i>
+Featured Work
+</h2>
 
 </div>
 
+<div class="projects-layout">
+
+<!-- MAIN PROJECT -->
+
 <div class="featured-project">
+
+<div class="featured-image">
+
+<img
+src="assets/toni-kroos.jpg"
+alt="Toni Kroos Project">
+
+</div>
+
+<div class="featured-content">
+
+<span class="featured-badge">
+
+FEATURED PROJECT
+
+</span>
 
 <h3>
 Toni Kroos Career Analysis &
@@ -251,76 +437,115 @@ Football Intelligence Corpus
 
 <p>
 
-A football intelligence corpus combining structured,
-semi-structured and unstructured data for tactical,
-performance and decision analytics.
+A comprehensive multi-source data corpus
+for advanced football intelligence,
+performance analysis and tactical research.
 
 </p>
 
 <div class="project-tags">
 
 <span>Sports Analytics</span>
-<span>Data Analysis</span>
+<span>Data Engineering</span>
 <span>Python</span>
-<span>Research</span>
+<span>NLP</span>
+<span>Visualization</span>
 
 </div>
 
-<a
-href="https://github.com/faizkarol/toni-kroos-career-analysis"
-target="_blank">
-View Repository →
+<a href="#">
+
+View Project →
+
 </a>
 
 </div>
 
-<div class="project-grid">
+</div>
+
+<!-- PROJECT GRID -->
+
+<div class="project-grid-small">
 
 <div class="project-card">
 
-<h3>
-Football Fan Momentum Analytics
-</h3>
+<h4>
+Football Fan
+Momentum Analytics
+</h4>
 
 <p>
-Sentiment, crowd energy and event analytics.
+
+Sentiment & momentum analysis
+of football fans.
+
 </p>
+
+<a href="#">
+View Project →
+</a>
 
 </div>
 
 <div class="project-card">
 
-<h3>
-Promotion Profitability Optimization Engine
-</h3>
+<h4>
+Promotion Profitability
+Optimization Engine
+</h4>
 
 <p>
-Business analytics and promotion performance analysis.
+
+Promotion ROI forecasting and
+uplift modelling.
+
 </p>
+
+<a href="#">
+View Project →
+</a>
 
 </div>
 
 <div class="project-card">
 
-<h3>
-Loan Default Risk Analysis
-</h3>
+<h4>
+Loan Default
+Risk Analysis
+</h4>
 
 <p>
-Predictive analysis for loan risk assessment.
+
+Credit risk modelling and
+default prediction.
+
 </p>
+
+<a href="#">
+View Project →
+</a>
 
 </div>
 
 <div class="project-card">
 
-<h3>
-F1 Pit Stop Strategy Analysis
-</h3>
+<h4>
+F1 Pit Stop
+Strategy Analysis
+</h4>
 
 <p>
-Performance analytics and race strategy insights.
+
+Strategic analysis of pit stop
+decisions in Formula 1.
+
 </p>
+
+<a href="#">
+View Project →
+</a>
+
+</div>
 
 </div>
 
@@ -328,87 +553,98 @@ Performance analytics and race strategy insights.
 
 </section>
 
-<!-- RESEARCH -->
+<!-- DECISION INTELLIGENCE LAB -->
 
 <section id="research">
 
-<div class="section-title">
+<div class="research-layout">
+
+<div class="research-summary">
 
 <h2>
-Decision Intelligence Lab
-</h2>
 
-</div>
+<i class="fa-solid fa-flask"></i>
 
-<div class="research-card">
+Decision
 
-<h3>
-Decision Making Under Uncertainty
-</h3>
-
-<p>
-
-Investigating how tactical intelligence from football
-can support strategic business decision-making.
-
-</p>
-
-<div class="framework-grid">
-
-<div class="framework">
-RDM
-</div>
-
-<div class="framework">
-DAPP
-</div>
-
-<div class="framework">
-IGDT
-</div>
-
-<div class="framework">
-Decision Intelligence
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- JOURNEY -->
+<!-- CAREER JOURNEY -->
 
 <section id="journey">
 
-<div class="section-title">
+<div class="section-header">
 
 <h2>
+
+<i class="fa-solid fa-briefcase"></i>
+
 Career Journey
+
 </h2>
 
 </div>
 
-<div class="journey-timeline">
+<div class="career-roadmap">
 
-<div class="journey-node">
-2019
-Python Developer Intern
+<div class="career-node">
+
+<div class="career-icon">
+💼
 </div>
 
-<div class="journey-node">
-2021–2024
-Capgemini
+<h3>2019</h3>
+
+<h4>Python Developer Intern</h4>
+
+<p>Peace Infotech</p>
+
 </div>
 
-<div class="journey-node">
-2025–2026
-HSBC Germany
+<div class="career-line"></div>
+
+<div class="career-node">
+
+<div class="career-icon">
+⚙️
 </div>
 
-<div class="journey-node">
-2024–2026
-M.Sc Big Data & Business Analytics
+<h3>2021</h3>
+
+<h4>Capgemini</h4>
+
+<p>Senior Software Engineer</p>
+
+</div>
+
+<div class="career-line"></div>
+
+<div class="career-node">
+
+<div class="career-icon">
+🏦
+</div>
+
+<h3>2025</h3>
+
+<h4>HSBC Germany</h4>
+
+<p>Data Analyst</p>
+
+</div>
+
+<div class="career-line"></div>
+
+<div class="career-node">
+
+<div class="career-icon">
+🎓
+</div>
+
+<h3>2026</h3>
+
+<h4>M.Sc Graduate</h4>
+
+<p>Big Data & Business Analytics</p>
+
 </div>
 
 </div>
@@ -419,87 +655,97 @@ M.Sc Big Data & Business Analytics
 
 <section id="expertise">
 
-<div class="section-title">
+<div class="section-header">
 
 <h2>
+
+<i class="fa-solid fa-flask"></i>
+
 Expertise
+
 </h2>
 
 </div>
 
 <div class="expertise-grid">
 
+<!-- DATA ANALYSIS -->
+
 <div class="expertise-card">
 
-<h3>
+<h3 class="blue">
 Data Analysis
 </h3>
 
-<p>
-Python
-<br>
-SQL
-<br>
-Excel
-<br>
-Pandas
-<br>
-Visualization
-</p>
+<ul>
+
+<li>Python</li>
+<li>SQL</li>
+<li>Excel</li>
+<li>Pandas</li>
+<li>Data Visualization</li>
+
+</ul>
 
 </div>
 
+<!-- BUSINESS ANALYTICS -->
+
 <div class="expertise-card">
 
-<h3>
+<h3 class="cyan">
 Business Analytics
 </h3>
 
-<p>
-Forecasting
-<br>
-Optimization
-<br>
-Decision Support
-<br>
-Reporting
-</p>
+<ul>
+
+<li>Forecasting</li>
+<li>Optimization</li>
+<li>Decision Support</li>
+<li>Reporting</li>
+<li>Scenario Analysis</li>
+
+</ul>
 
 </div>
 
+<!-- SPORTS ANALYTICS -->
+
 <div class="expertise-card">
 
-<h3>
+<h3 class="purple">
 Sports Analytics
 </h3>
 
-<p>
-Performance Analysis
-<br>
-Event Analytics
-<br>
-Sentiment Analysis
-<br>
-Fan Analytics
-</p>
+<ul>
+
+<li>Performance Analysis</li>
+<li>Event Data Analysis</li>
+<li>Sentiment Analysis</li>
+<li>Fan Analytics</li>
+<li>Tactical Analysis</li>
+
+</ul>
 
 </div>
 
+<!-- DECISION INTELLIGENCE -->
+
 <div class="expertise-card">
 
-<h3>
+<h3 class="gold">
 Decision Intelligence
 </h3>
 
-<p>
-RDM
-<br>
-DAPP
-<br>
-IGDT
-<br>
-Strategic Decision Support
-</p>
+<ul>
+
+<li>RDM</li>
+<li>DAPP</li>
+<li>IGDT</li>
+<li>Decision Support Systems</li>
+<li>Strategic Decision-Making</li>
+
+</ul>
 
 </div>
 
@@ -511,33 +757,72 @@ Strategic Decision Support
 
 <section id="contact">
 
-<h2>
-Contact
-</h2>
+<div class="contact-dashboard">
+
+<div class="contact-intro">
+
+<h3>
+Let's Connect
+</h3>
 
 <p>
-Email: karol.faiz@yahoo.com
-</p>
 
-<p>
-
-<a href="https://github.com/faizkarol">
-GitHub
-</a>
-
-|
-
-<a href="https://www.linkedin.com/in/faiz-karol">
-LinkedIn
-</a>
+I'm open to exciting opportunities
+and collaborations.
 
 </p>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-regular fa-envelope"></i>
+
+<span>
+
+karol.faiz@yahoo.com
+
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fab fa-linkedin"></i>
+
+<span>
+
+linkedin.com/in/faiz-karol
+
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fab fa-github"></i>
+
+<span>
+
+github.com/faizkarol
+
+</span>
+
+</div>
+
+</div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
+<p>
+
 © 2026 Faiz Karol
+
+</p>
 
 </footer>
 
