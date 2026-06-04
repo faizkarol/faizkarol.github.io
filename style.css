@@ -535,3 +535,68 @@ display:none;
 }
 
 }
+/* =========================
+   ANIMATIONS
+========================= */
+
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:.8s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.nav-links a.active{
+color:#4f8cff;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light{
+background:#f8fafc;
+color:#111827;
+}
+
+body.light nav{
+background:rgba(255,255,255,.92);
+}
+
+body.light .logo,
+body.light .nav-links a{
+color:#111827;
+}
+
+body.light .widget,
+body.light .project-card,
+body.light .featured-project,
+body.light .research-card,
+body.light .journey-node,
+body.light .expertise-card{
+background:#ffffff;
+border-color:#dbeafe;
+}
+
+body.light .hero p,
+body.light .section-title p{
+color:#475569;
+}
+
+body.light .timeline-item span{
+color:#2563eb;
+}
+
+body.light footer{
+color:#64748b;
+}
+
+body.light .background-grid{
+background-image:
+linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);
+}
