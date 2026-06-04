@@ -166,10 +166,15 @@ gap:15px;
 
 .stat{
 background:var(--card);
-padding:18px;
+padding:14px;
+min-height:140px;
 border-radius:12px;
 text-align:center;
 border:1px solid rgba(79,140,255,.2);
+}
+
+.stat p{
+font-size:15px;
 }
 
 .stat h2{
