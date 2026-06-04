@@ -399,3 +399,52 @@ padding:35px 6%;
 }
 
 }
+
+/* Light Theme */
+
+body.light{
+background:#f8fafc;
+color:#111827;
+}
+
+body.light nav{
+background:rgba(255,255,255,.95);
+}
+
+body.light .logo,
+body.light .nav-links a,
+body.light #theme-toggle{
+color:#111827;
+}
+
+body.light .card,
+body.light .stat,
+body.light .skills span{
+background:#ffffff;
+border:1px solid #dbeafe;
+color:#111827;
+}
+
+body.light .project-tags span,
+body.light .research-tags span{
+background:#dbeafe;
+color:#111827;
+}
+
+body.light .tagline{
+color:#475569;
+}
+
+body.light section h2{
+color:#2563eb;
+}
+
+body.light footer{
+color:#475569;
+}
+
+body.light .background-grid{
+background-image:
+linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);
+}
