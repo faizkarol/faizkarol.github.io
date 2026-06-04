@@ -1,77 +1,288 @@
-// ==========================
+// ======================
 // THEME TOGGLE
-// ==========================
+// ======================
 
 const themeToggle = document.getElementById("theme-toggle");
 
-themeToggle.addEventListener("click", () => {
+if(themeToggle){
+
+themeToggle.addEventListener("click",()=>{
 
 document.body.classList.toggle("light");
 
-if(document.body.classList.contains("light")){
-themeToggle.textContent = "☀️";
+themeToggle.textContent =
+document.body.classList.contains("light")
+? "☀️"
+: "🌙";
+
+});
+
 }
-else{
-themeToggle.textContent = "🌙";
+
+// ======================
+// HERO LINE CHART
+// ======================
+
+const heroLineChart =
+document.getElementById("heroLineChart");
+
+if(heroLineChart){
+
+new Chart(heroLineChart,{
+
+type:"line",
+
+data:{
+
+labels:[
+"Jan",
+"Feb",
+"Mar",
+"Apr",
+"May",
+"Jun",
+"Jul"
+],
+
+datasets:[{
+
+label:"Analytics Activity",
+
+data:[
+12,
+19,
+15,
+28,
+35,
+40,
+55
+],
+
+borderColor:"#4f8cff",
+
+backgroundColor:
+"rgba(79,140,255,.15)",
+
+fill:true,
+
+tension:.4
+
+}]
+
+},
+
+options:{
+
+plugins:{
+legend:{
+display:false
+}
+},
+
+scales:{
+x:{
+display:false
+},
+y:{
+display:false
+}
+}
+
 }
 
 });
 
-// ==========================
-// PORTFOLIO DOMAIN CHART
-// ==========================
+}
 
-const ctx = document.getElementById("domainChart");
+// ======================
+// HERO DONUT
+// ======================
 
-if(ctx){
+const heroDonutChart =
+document.getElementById("heroDonutChart");
 
-new Chart(ctx, {
+if(heroDonutChart){
 
-type: "doughnut",
+new Chart(heroDonutChart,{
 
-data: {
+type:"doughnut",
 
-labels: [
+data:{
+
+labels:[
+"Sports",
+"Business",
+"Data",
+"Decision"
+],
+
+datasets:[{
+
+data:[
+40,
+35,
+15,
+10
+],
+
+backgroundColor:[
+"#4f8cff",
+"#6ea8ff",
+"#8fc0ff",
+"#bfd8ff"
+],
+
+borderWidth:0
+
+}]
+
+},
+
+options:{
+
+plugins:{
+legend:{
+display:false
+}
+},
+
+cutout:"70%"
+
+}
+
+});
+
+}
+
+// ======================
+// ACTIVITY BAR CHART
+// ======================
+
+const activityChart =
+document.getElementById("activityChart");
+
+if(activityChart){
+
+new Chart(activityChart,{
+
+type:"bar",
+
+data:{
+
+labels:[
+"Projects",
+"Research",
+"Analytics",
+"Visualization"
+],
+
+datasets:[{
+
+data:[
+90,
+80,
+95,
+85
+],
+
+backgroundColor:[
+"#4f8cff",
+"#6ea8ff",
+"#89bbff",
+"#bfd8ff"
+]
+
+}]
+
+},
+
+options:{
+
+plugins:{
+legend:{
+display:false
+}
+},
+
+scales:{
+y:{
+display:false
+},
+x:{
+ticks:{
+color:"#9fbfff"
+}
+}
+}
+
+}
+
+});
+
+}
+
+// ======================
+// PORTFOLIO CHART
+// ======================
+
+const portfolioChart =
+document.getElementById("domainChart");
+
+if(portfolioChart){
+
+new Chart(portfolioChart,{
+
+type:"doughnut",
+
+data:{
+
+labels:[
 "Sports Analytics",
 "Business Analytics",
 "Data Analysis",
 "Decision Intelligence"
 ],
 
-datasets: [{
+datasets:[{
 
-data: [40,30,20,10],
-
-backgroundColor: [
-"#4f8cff",
-"#6ea4ff",
-"#89b7ff",
-"#b6d2ff"
+data:[
+40,
+35,
+15,
+10
 ],
 
-borderWidth: 0
+backgroundColor:[
+"#4f8cff",
+"#6ea8ff",
+"#8fc0ff",
+"#bfd8ff"
+],
+
+borderWidth:0
 
 }]
 
 },
 
-options: {
+options:{
 
-responsive: true,
+responsive:true,
 
-plugins: {
+plugins:{
 
-legend: {
-position: "bottom",
-labels: {
-color: "#ffffff",
-padding: 20
+legend:{
+position:"bottom",
+
+labels:{
+color:"#ffffff",
+padding:20
 }
 }
 
 },
 
-cutout: "70%"
+cutout:"70%"
 
 }
 
@@ -79,11 +290,14 @@ cutout: "70%"
 
 }
 
-// ==========================
+// ======================
 // SCROLL ANIMATION
-// ==========================
+// ======================
 
-const observer = new IntersectionObserver((entries)=>{
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
 
 entries.forEach(entry=>{
 
@@ -95,12 +309,16 @@ entry.target.classList.add("show");
 
 });
 
-},{
-threshold:0.15
-});
+},
+
+{
+threshold:.15
+}
+
+);
 
 document.querySelectorAll(
-".widget,.project-card,.featured-project,.research-card,.expertise-card,.journey-node"
+".analytics-card,.project-card,.timeline-item,.flow-item,.expertise-card,.contact-card"
 ).forEach(el=>{
 
 el.classList.add("hidden");
@@ -109,79 +327,50 @@ observer.observe(el);
 
 });
 
-// ==========================
-// TILT EFFECT
-// ==========================
+// ======================
+// CARD HOVER EFFECT
+// ======================
 
 document.querySelectorAll(
-".widget,.project-card,.featured-project"
+".analytics-card,.project-card,.expertise-card"
 ).forEach(card=>{
 
-card.addEventListener("mousemove",(e)=>{
+card.addEventListener(
+"mousemove",
+(e)=>{
 
-const rect = card.getBoundingClientRect();
+const rect =
+card.getBoundingClientRect();
 
-const x = e.clientX - rect.left;
-const y = e.clientY - rect.top;
+const x =
+e.clientX - rect.left;
 
-const rotateY = (x / rect.width - 0.5) * 10;
-const rotateX = (y / rect.height - 0.5) * -10;
+const y =
+e.clientY - rect.top;
+
+const rotateX =
+(y / rect.height - .5) * -8;
+
+const rotateY =
+(x / rect.width - .5) * 8;
 
 card.style.transform =
 `perspective(1000px)
- rotateX(${rotateX}deg)
- rotateY(${rotateY}deg)`;
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-4px)`;
 
-});
+}
+);
 
-card.addEventListener("mouseleave",()=>{
+card.addEventListener(
+"mouseleave",
+()=>{
 
 card.style.transform =
-"perspective(1000px) rotateX(0deg) rotateY(0deg)";
-
-});
-
-});
-
-// ==========================
-// ACTIVE NAVIGATION
-// ==========================
-
-const sections =
-document.querySelectorAll("section");
-
-const navLinks =
-document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll",()=>{
-
-let current = "";
-
-sections.forEach(section=>{
-
-const sectionTop =
-section.offsetTop - 150;
-
-if(pageYOffset >= sectionTop){
-
-current = section.getAttribute("id");
+"perspective(1000px) rotateX(0) rotateY(0)";
 
 }
-
-});
-
-navLinks.forEach(link=>{
-
-link.classList.remove("active");
-
-if(
-link.getAttribute("href") === `#${current}`
-){
-
-link.classList.add("active");
-
-}
-
-});
+);
 
 });
