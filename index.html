@@ -1,175 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Faiz Karol | Data Analyst</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
 
 <body>
 
-<div class="background-grid"></div>
+<nav>
+    <div class="logo">FAIZ KAROL</div>
 
-<!-- NAVBAR -->
-
-<nav class="navbar">
-
-<div class="logo">
-
-<div class="logo-box">FK</div>
-
-<span>FAIZ KAROL</span>
-
-</div>
-
-<ul class="nav-links">
-
-<li><a class="active" href="#">Home</a></li>
-
-<li><a href="#">Analytics Studio</a></li>
-
-<li><a href="#">Projects</a></li>
-
-<li><a href="#">Research Lab</a></li>
-
-<li><a href="#">Journey</a></li>
-
-<li><a href="#">Expertise</a></li>
-
-<li><a href="#">Contact</a></li>
-
-</ul>
-
-<div class="nav-icons">
-
-<i class="fab fa-github"></i>
-
-<i class="fab fa-linkedin"></i>
-
-<div class="theme-btn">
-🌙
-</div>
-
-</div>
-
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<!-- HERO DASHBOARD -->
+<section class="hero" id="home">
 
-<section class="hero-dashboard">
+    <div class="hero-left">
 
-<!-- PROFILE -->
+        <img src="assets/profile.jpg" alt="Faiz">
 
-<div class="profile-card">
+        <h1>FAIZ <span>KAROL</span></h1>
 
-<img src="assets/profile.jpg" alt="Faiz Karol">
+        <h2>Data Analyst | Business Analytics | Sports Analytics</h2>
 
-</div>
+        <p>
+            Transforming data into actionable insights through
+            analytics, visualization and decision intelligence.
+        </p>
 
-<!-- HERO CONTENT -->
+        <div class="buttons">
 
-<div class="hero-content">
+            <a href="#" class="btn">Download CV</a>
 
-<div class="hero-tag">
+            <a href="https://github.com/" target="_blank" class="btn secondary">
+                GitHub
+            </a>
 
-DATA ANALYST • BUSINESS ANALYSIS • SPORTS ANALYTICS • DECISION INTELLIGENCE
+            <a href="https://linkedin.com/" target="_blank" class="btn secondary">
+                LinkedIn
+            </a>
 
-</div>
+        </div>
 
-<h1>
+    </div>
 
-FAIZ <span>KAROL</span>
+    <div class="hero-right">
 
-</h1>
+        <div class="card">
+            <canvas id="skillsChart"></canvas>
+        </div>
 
-<h2>
+        <div class="card">
+            <canvas id="lineChart"></canvas>
+        </div>
 
-Data Analyst |
-Business Analyst |
-Sports Analytics |
-Decision Intelligence
+    </div>
 
-</h2>
+</section>
 
-<p>
+<section class="section" id="projects">
 
-Transforming data into actionable insights through analytics,
-research, visualization and strategic decision-making.
+    <h2>Featured Projects</h2>
 
-</p>
+    <div class="project-grid">
 
-<div class="hero-buttons">
+        <div class="project-card">
+            <h3>Toni Kroos Career Analytics</h3>
+            <p>Football intelligence project using advanced analytics.</p>
+        </div>
 
-<a href="#" class="primary-btn">
+        <div class="project-card">
+            <h3>Football Fan Sentiment Analysis</h3>
+            <p>Social media sentiment and momentum analytics.</p>
+        </div>
 
-<i class="fa-solid fa-download"></i>
+        <div class="project-card">
+            <h3>MREL Data Automation</h3>
+            <p>Excel and VBA automation for regulatory reporting.</p>
+        </div>
 
-Download CV
+        <div class="project-card">
+            <h3>Decision Making Under Uncertainty</h3>
+            <p>Master's thesis research project.</p>
+        </div>
 
-</a>
+    </div>
 
-<a href="#" class="secondary-btn">
+</section>
 
-<i class="fab fa-github"></i>
+<section class="section" id="skills">
 
-GitHub
+    <h2>Analytics Toolkit</h2>
 
-</a>
+    <div class="skill">
+        <span>Python</span>
+        <div class="bar"><div style="width:95%"></div></div>
+    </div>
 
-<a href="#" class="secondary-btn">
+    <div class="skill">
+        <span>SQL</span>
+        <div class="bar"><div style="width:90%"></div></div>
+    </div>
 
-<i class="fab fa-linkedin"></i>
+    <div class="skill">
+        <span>Excel</span>
+        <div class="bar"><div style="width:90%"></div></div>
+    </div>
 
-LinkedIn
+    <div class="skill">
+        <span>Power BI</span>
+        <div class="bar"><div style="width:80%"></div></div>
+    </div>
 
-</a>
+    <div class="skill">
+        <span>VBA</span>
+        <div class="bar"><div style="width:75%"></div></div>
+    </div>
 
-</div>
+</section>
 
-</div>
+<section class="section" id="journey">
 
-<!-- DASHBOARD -->
+    <h2>Career Journey</h2>
 
-<div class="dashboard-panel">
+    <div class="timeline">
 
-<div class="chart-card">
+        <div class="timeline-item">
+            <h3>2019</h3>
+            <p>Python Developer Intern</p>
+        </div>
 
-<h3>Performance Overview</h3>
+        <div class="timeline-item">
+            <h3>2021</h3>
+            <p>Senior Software Engineer</p>
+        </div>
 
-<canvas id="performanceChart"></canvas>
+        <div class="timeline-item">
+            <h3>2025</h3>
+            <p>HSBC Germany - Data Analyst</p>
+        </div>
 
-</div>
+        <div class="timeline-item">
+            <h3>2026</h3>
+            <p>M.Sc Big Data & Business Analytics</p>
+        </div>
 
-<div class="chart-card">
+    </div>
 
-<h3>Domain Breakdown</h3>
+</section>
 
-<canvas id="domainChart"></canvas>
+<section class="section" id="contact">
 
-</div>
+    <h2>Let's Connect</h2>
 
-<div class="chart-card full-width">
+    <p>Email: your@email.com</p>
 
-<h3>Analytics Activity</h3>
+    <p>LinkedIn: linkedin.com/in/faiz-karol</p>
 
-<canvas id="activityChart"></canvas>
-
-</div>
-
-</div>
+    <p>GitHub: github.com/faizkarol</p>
 
 </section>
 
