@@ -1,29 +1,41 @@
-const skillsCtx = document.getElementById('skillsChart');
+const performanceCtx =
+document.getElementById("performanceChart");
 
-new Chart(skillsCtx, {
-    type: 'doughnut',
-    data: {
-        labels: [
-            'Sports Analytics',
-            'Business Analytics',
-            'Data Analysis',
-            'Decision Intelligence'
-        ],
-        datasets: [{
-            data: [40,35,15,10]
-        }]
-    }
+new Chart(performanceCtx, {
+type: "line",
+data: {
+labels: [
+"Jan","Feb","Mar","Apr",
+"May","Jun","Jul","Aug"
+],
+datasets: [{
+data: [20,45,30,60,42,70,62,90],
+borderWidth: 3,
+tension: 0.4
+}]
+},
+options: {
+plugins:{
+legend:{
+display:false
+}
+}
+}
 });
 
-const lineCtx = document.getElementById('lineChart');
+const domainCtx =
+document.getElementById("domainChart");
 
-new Chart(lineCtx,{
-    type:'line',
-    data:{
-        labels:['Jan','Feb','Mar','Apr','May','Jun'],
-        datasets:[{
-            label:'Growth',
-            data:[10,20,15,30,40,55]
-        }]
-    }
+new Chart(domainCtx,{
+type:"doughnut",
+data:{
+labels:[
+"Sports",
+"Business",
+"Decision"
+],
+datasets:[{
+data:[40,35,25]
+}]
+}
 });
