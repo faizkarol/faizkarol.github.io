@@ -137,9 +137,7 @@ function drawHeroChart() {
 
 window.addEventListener('resize', drawHeroChart);
 
-// ── Download CV (placeholder — point this to your actual CV file)
+// ── Download CV
 function downloadCV() {
-  // Example once you add a CV file to the repo:
-  // window.location.href = 'assets/Faiz_Karol_CV.pdf';
-  alert('CV download — add your CV file to the repo and update this function in script.js!');
+  window.open('assets/Faiz_Karol_CV.pdf', '_blank');
 }
