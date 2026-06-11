@@ -5,12 +5,53 @@ document.documentElement.classList.add('js-ready');
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');
 let mx = 0, my = 0, rx = 0, ry = 0;
+let cursorActive = false;
 
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
+function showCursor() {
+  if (!cursorActive) {
+    cursorActive = true;
+    cursor.style.opacity = '1';
+    ring.style.opacity = '0.5';
+  }
+}
+function hideCursor() {
+  cursorActive = false;
+  cursor.style.opacity = '0';
+  ring.style.opacity = '0';
+}
+
+function updateCursorPosition(x, y) {
+  mx = x; my = y;
   cursor.style.left = mx + 'px';
   cursor.style.top = my + 'px';
+}
+
+// Mouse support
+document.addEventListener('mousemove', e => {
+  showCursor();
+  updateCursorPosition(e.clientX, e.clientY);
 });
+
+// Touch support — follow finger while touching, hide on release
+document.addEventListener('touchstart', e => {
+  if (e.touches.length > 0) {
+    showCursor();
+    updateCursorPosition(e.touches[0].clientX, e.touches[0].clientY);
+    rx = mx; ry = my;
+  }
+}, { passive: true });
+
+document.addEventListener('touchmove', e => {
+  if (e.touches.length > 0) {
+    updateCursorPosition(e.touches[0].clientX, e.touches[0].clientY);
+  }
+}, { passive: true });
+
+document.addEventListener('touchend', hideCursor);
+document.addEventListener('touchcancel', hideCursor);
+
+// Start hidden until first interaction
+hideCursor();
 
 function animateRing() {
   rx += (mx - rx) * 0.12;
