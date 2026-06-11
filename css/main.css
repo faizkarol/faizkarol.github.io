@@ -49,31 +49,36 @@ text-decoration:none;
 }
 
 .hero{
-padding:50px 60px;
 display:grid;
-grid-template-columns:1.3fr 1fr;
-gap:40px;
+grid-template-columns:55% 45%;
+align-items:start;
+padding:30px 40px;
+gap:25px;
+min-height:600px;
 }
 
 .hero-left{
 display:flex;
-align-items:center;
+align-items:flex-start;
 gap:40px;
+padding-top:40px;
 }
 
 .profile-glow{
-width:260px;
-height:260px;
+width:240px;
+height:240px;
+padding:8px;
 border-radius:50%;
-padding:6px;
-background:linear-gradient(
-135deg,
-#1e90ff,
-#00d4ff
-);
+
+background:
+radial-gradient(circle,
+rgba(0,212,255,.4),
+rgba(30,144,255,.1));
+
 box-shadow:
-0 0 30px #1e90ff,
-0 0 80px rgba(30,144,255,.4);
+0 0 20px #1e90ff,
+0 0 60px rgba(30,144,255,.4),
+0 0 120px rgba(30,144,255,.2);
 }
 
 .profile-glow img{
