@@ -108,75 +108,11 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 // Trigger bars in hero on load
 window.addEventListener('load', () => {
   setTimeout(() => {
-    document.querySelectorAll('.hero-right .skill-bar-fill').forEach(bar => {
+    document.querySelectorAll('.hero-right .toolkit-bar-fill').forEach(bar => {
       bar.style.width = bar.dataset.width + '%';
     });
   }, 400);
-  drawHeroChart();
 });
-
-// ── Hero performance chart (canvas)
-function drawHeroChart() {
-  const canvas = document.getElementById('heroChart');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-  canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-  ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-  const W = canvas.offsetWidth, H = canvas.offsetHeight;
-
-  const data = [22, 35, 28, 42, 38, 55, 48, 62, 58, 74, 68, 82];
-  const min = Math.min(...data) - 5, max = Math.max(...data) + 5;
-  const pts = data.map((v, i) => ({
-    x: (i / (data.length - 1)) * W,
-    y: H - ((v - min) / (max - min)) * H
-  }));
-
-  // Area fill
-  const grad = ctx.createLinearGradient(0, 0, 0, H);
-  grad.addColorStop(0, 'rgba(56,139,253,0.25)');
-  grad.addColorStop(1, 'rgba(56,139,253,0)');
-  ctx.beginPath();
-  ctx.moveTo(pts[0].x, pts[0].y);
-  for (let i = 1; i < pts.length; i++) {
-    const cp = { x: (pts[i - 1].x + pts[i].x) / 2, y: (pts[i - 1].y + pts[i].y) / 2 };
-    ctx.quadraticCurveTo(pts[i - 1].x, pts[i - 1].y, cp.x, cp.y);
-  }
-  ctx.lineTo(pts[pts.length - 1].x, pts[pts.length - 1].y);
-  ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath();
-  ctx.fillStyle = grad; ctx.fill();
-
-  // Line
-  ctx.beginPath();
-  ctx.moveTo(pts[0].x, pts[0].y);
-  for (let i = 1; i < pts.length; i++) {
-    const cp = { x: (pts[i - 1].x + pts[i].x) / 2, y: (pts[i - 1].y + pts[i].y) / 2 };
-    ctx.quadraticCurveTo(pts[i - 1].x, pts[i - 1].y, cp.x, cp.y);
-  }
-  ctx.lineTo(pts[pts.length - 1].x, pts[pts.length - 1].y);
-  ctx.strokeStyle = '#388bfd';
-  ctx.lineWidth = 2;
-  ctx.stroke();
-
-  // Dots
-  pts.forEach((p, i) => {
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
-    ctx.fillStyle = i === pts.length - 1 ? '#39d0d8' : '#388bfd';
-    ctx.fill();
-  });
-
-  // Month labels
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  ctx.fillStyle = 'rgba(122,155,191,0.7)';
-  ctx.font = '9px JetBrains Mono, monospace';
-  ctx.textAlign = 'center';
-  pts.forEach((p, i) => {
-    if (i % 2 === 0) ctx.fillText(months[i], p.x, H - 2);
-  });
-}
-
-window.addEventListener('resize', drawHeroChart);
 
 // ── Download CV
 function downloadCV() {
